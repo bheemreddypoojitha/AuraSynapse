@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Liquid Crystal Design System - Deep Space & Chrome */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 8% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 8% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Chrome silver with iridescent glow */
+    --primary: 0 0% 90%;
+    --primary-foreground: 240 10% 3.9%;
+
+    /* Subtle glowing accent */
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 8% 12%;
+    --muted-foreground: 240 5% 65%;
+
+    /* Iridescent accent - cyan-purple shift */
+    --accent: 280 60% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 8% 15%;
+    --input: 240 8% 15%;
+    --ring: 280 60% 60%;
+
+    --radius: 1rem;
+
+    /* Aura-specific tokens */
+    --aura-glow: 280 60% 60%;
+    --aura-chrome: 0 0% 85%;
+    --aura-deep: 240 15% 6%;
+    --aura-shimmer: 180 100% 70%;
+    
+    /* Concept corner colors */
+    --concept-bold: 320 90% 60%;
+    --concept-classic: 45 100% 60%;
+    --concept-minimal: 0 0% 90%;
+    --concept-organic: 150 70% 50%;
+
+    /* Gradients */
+    --gradient-liquid: linear-gradient(135deg, hsl(280 60% 60% / 0.3), hsl(180 100% 70% / 0.3));
+    --gradient-chrome: linear-gradient(180deg, hsl(0 0% 95%), hsl(0 0% 75%));
+    --gradient-space: radial-gradient(ellipse at center, hsl(240 15% 10%), hsl(240 10% 3.9%));
+    
+    /* Animations */
+    --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
