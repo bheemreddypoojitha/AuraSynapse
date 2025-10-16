@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# Aura Synapse Mirror | Evol Jewels
 
-## Project info
+This project is an immersive, multi-page style discovery experience for a conceptual jewelry brand, "Evol Jewels." It guides the user through two highly animated and interactive screens to determine their "Style Archetype."
 
-**URL**: https://lovable.dev/projects/cecc6945-1446-4506-b03c-663c966e656e
+- **IdleScreen:** A visually rich, 3D parallax collage that serves as the entry point.
+- **KineticSurvey:** An interactive survey where the user selects their preferred styles from a dynamic, 3D holographic gallery.
 
-## How can I edit this code?
 
-There are several ways of editing your application.
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cecc6945-1446-4506-b03c-663c966e656e) and start prompting.
+This project is built with a modern, animation-focused frontend stack:
 
-Changes made via Lovable will be committed automatically to this repo.
+-   **Framework:** [React](https://reactjs.org/) (with TypeScript)
+-   **Build Tool:** [Vite](https://vitejs.dev/)
+-   **Styling:** [Styled Components](https://styled-components.com/) for self-contained component styling.
+-   **Animation:**
+    -   [Framer Motion](https://www.framer.com/motion/) for React-based UI and layout animations.
+    -   [GSAP (GreenSock Animation Platform)](https://greensock.com/gsap/) for high-performance, complex timeline animations.
+-   **Routing:** [React Router](https://reactrouter.com/) for client-side page navigation.
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Follow these instructions to get the project running on your local machine.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+You need to have [Node.js](https://nodejs.org/) (version 18 or higher is recommended) and npm installed on your computer.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+-   To check if you have Node.js installed, run this command in your terminal:
+    ```bash
+    node -v
+    ```
+-   To check your npm version, run:
+    ```bash
+    npm -v
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
+1.  **Clone the repository** (or download and extract the project files) into a folder on your computer.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+2.  **Navigate to the project directory** in your terminal:
+    ```bash
+    cd path/to/your/project
+    ```
 
-**Edit a file directly in GitHub**
+3.  **Install all the necessary dependencies** using npm. This will download all the libraries listed in `package.json` (like React, GSAP, Styled Components, etc.).
+    ```bash
+    npm install
+    ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Running the Application
 
-**Use GitHub Codespaces**
+Once the installation is complete, you can start the local development server.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1.  **Run the `dev` command:**
+    ```bash
+    npm run dev
+    ```
 
-## What technologies are used for this project?
+2.  **Open your browser:** The terminal will output a local URL, which is usually `http://localhost:8080` or `http://localhost:5173`. Open this URL in your web browser.
 
-This project is built with:
+You should now see the "Aura Synapse Mirror" application running. The development server will automatically reload the page whenever you make changes to the code.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/cecc6945-1446-4506-b03c-663c966e656e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+-   `public/`: Contains static assets like your `og-image.png` and any font files.
+-   `src/`: This is the main folder for all your application code.
+    -   `main.tsx`: The main entry point of the application. It sets up the router and renders the `App` component.
+    -   `App.tsx`: The root component that defines the application's routing structure.
+    -   `pages/`: Contains the primary screen components.
+        -   `idlescreen.tsx`: The initial landing page collage.
+        -   `KineticSurvey.tsx`: The interactive holographic style selection page.
+        -   `RevealScreen.tsx`: The final screen that shows the user's style archetype.
